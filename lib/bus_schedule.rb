@@ -25,7 +25,7 @@ require 'pp'
 # BusRoutes collects mutiple Route objectes
 # a Route obj collects Stop objects
   def self.route(name,&block)
-    @routes ||= {}
+    @routes ||= []
 	route = Route.new(name)
 	route.instance_eval(&block)
 	pp route
